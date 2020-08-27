@@ -10,11 +10,11 @@ export class CombustibleComponent implements OnInit {
 
   combustibleForm = this.formBuilder.group({
     combustible: ['', Validators.required],
-    unoCuatro: ['756', Validators.required],
-    dosTres: ['765', Validators.required],
-    auxiliares: ['765', Validators.required],
-    pylons: ['765', Validators.required],
-    total: ['765', Validators.required],
+    unoCuatro: ['2', Validators.required],
+    dosTres: ['3', Validators.required],
+    auxiliares: ['4', Validators.required],
+    pylons: ['5', Validators.required],
+    total: ['6', Validators.required],
   });
 
   @Output() valido2: EventEmitter<boolean> = new EventEmitter();

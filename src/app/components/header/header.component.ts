@@ -26,16 +26,20 @@ export class HeaderComponent implements OnInit {
     if (this.formularioValido1 && this.index === 0) {
       this.siguiente.emit(true);
       this.progress = 0.3;
-    }else if (this.formularioValido1 === false){
-      this.showAlert('El formulario no es valido', 'Asegurese de llenar todos los campos correctamente');
+    } else if (this.formularioValido1 === false && this.index === 0){
+      this.showAlert();
     }
     if (this.formularioValido2 && this.index === 1) {
       this.siguiente.emit(true);
       this.progress = 0.45;
+    } else if (this.formularioValido2 === false && this.index === 1) {
+      this.showAlert();
     }
     if (this.formularioValido3 && this.index === 2) {
       this.siguiente.emit(true);
       this.progress = 0.6;
+    } else if (this.formularioValido3 === false && this.index === 2) {
+      this.showAlert();
     }
   }
 
@@ -52,11 +56,11 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  async showAlert(subHeader: string, message: string){
+  async showAlert(){
     const alert = await this.alertController.create({
       header: 'Alerta',
-      subHeader,
-      message,
+      subHeader: 'Formulario no valido',
+      message: 'Asegurese de llenar todos los campos',
       buttons: ['OK']
     });
 

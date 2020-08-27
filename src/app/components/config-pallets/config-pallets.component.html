@@ -1,3 +1,32 @@
-<p>
-  config-pallets works!
-</p>
+<h3>Configuración de pallets</h3>
+<br>
+
+<ion-item>
+    <ion-label>Peso del pasajero: </ion-label>
+    <ion-input [(ngModel)]="addPasajeros.peso_pasajero"></ion-input>
+    <ion-button color="light" (click)="agregar(addPasajeros)">
+        <ion-icon name="add"></ion-icon>
+    </ion-button>
+</ion-item>
+
+<ion-item *ngFor="let item of pasajeros">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-item color="primary"><b>Pallet:</b></ion-item>
+                <ion-item></ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item color="primary">
+                    <b>Peso(lb):</b>
+                </ion-item>
+                <ion-item>
+                    {{item.peso_pasajero}}
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-button color="danger" (click)="eliminar(item.peso_pasajero)">
+        <ion-icon name="trash"></ion-icon>
+    </ion-button>
+</ion-item>

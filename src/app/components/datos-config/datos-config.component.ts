@@ -9,15 +9,15 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class DatosConfigComponent implements OnInit {
 
   configForm = this.formBuilder.group({
-    mision: ['232', Validators.required],
-    avion: ['avion1', Validators.required],
+    mision: ['1', Validators.required],
     fecha: ['', Validators.required],
+    avion: ['avion1', Validators.required],
     origen: ['origen1', Validators.required],
     destino: ['destino1', Validators.required],
     piloto: ['elian', Validators.required],
-    combustible: ['3214', Validators.required],
-    horas: ['1', Validators.required],
-    minutos: ['1', Validators.required],
+    combustible: ['2', Validators.required],
+    horas: ['3', Validators.required],
+    minutos: ['4', Validators.required],
   });
 
   @Output() valido: EventEmitter<boolean> = new EventEmitter();
