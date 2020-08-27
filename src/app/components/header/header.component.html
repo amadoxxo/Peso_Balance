@@ -1,0 +1,20 @@
+<ion-header translucent>
+    <ion-toolbar color="primary">
+        <ion-title>Peso Balance</ion-title>
+        <ion-buttons slot="end" *ngIf="index !== 2">
+            <ion-button (click)="next()">
+                <ion-label style="font-size: 0.7em;">Siguiente</ion-label>
+                <ion-icon name="chevron-forward"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="start" *ngIf="index !== 0">
+            <ion-button (click)="back()">
+                <ion-icon name="chevron-back"></ion-icon>
+                <ion-label style="font-size: 0.7em;">Atrás</ion-label>
+            </ion-button>
+        </ion-buttons>
+
+        <ion-progress-bar color="secondary" [value]="progress"></ion-progress-bar>
+    </ion-toolbar>
+</ion-header>

@@ -1,0 +1,31 @@
+<div>
+    <h3>Centro de Gravedad</h3>
+    <br>
+    <h4>CG Decolage</h4>
+    <ion-grid>
+        <form [formGroup]="centroGravedad">
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label position="stacked">Brazo(ft):</ion-label>
+                        <ion-input formControlName="brazo"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="stacked">CG(%):</ion-label>
+                        <ion-input formControlName="cg"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label position="stacked">Peso(lb):</ion-label>
+                        <ion-input formControlName="peso"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="stacked">Momento(lb,ft):</ion-label>
+                        <ion-input formControlName="momento"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </form>
+    </ion-grid>
+</div>

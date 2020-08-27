@@ -1,0 +1,70 @@
+<div>
+    <h3>Configuración del combustible</h3>
+    <br>
+    <form [formGroup]="combustibleForm">
+
+        <ion-item>
+            <ion-label>Combustible:</ion-label>
+            <ion-input formControlName="combustible" placeholder="Inserte combustible del avió n" type="number"></ion-input>
+        </ion-item>
+        <h4 class="ion-text-center">Decolaje</h4>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-item color="secondary">
+                        <ion-label class="ion-text-center"><b>Tanques</b></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label class="ion-text-center"><b>1 y 4:</b></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label class="ion-text-center"><b>2 y 3:</b></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label class="ion-text-center"><b>Auxiliares:</b></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label class="ion-text-center"><b>Pylons:</b></ion-label>
+                    </ion-item>
+
+                    <ion-item color="secondary">
+                        <ion-label class="ion-text-center"><b>Total:</b></ion-label>
+                    </ion-item>
+                </ion-col>
+
+                <ion-col>
+                    <ion-item color="secondary">
+                        <ion-label class="ion-text-center"><b>Peso(lb)</b></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>-</ion-label>
+                        <ion-input formControlName="unoCuatro" type="number"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>-</ion-label>
+                        <ion-input formControlName="dosTres" type="number"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>-</ion-label>
+                        <ion-input formControlName="auxiliares" type="number"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>-</ion-label>
+                        <ion-input formControlName="pylons" type="number"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>-</ion-label>
+                        <ion-input formControlName="total" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
+    </form>
+</div>

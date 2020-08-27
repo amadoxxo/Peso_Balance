@@ -1,0 +1,77 @@
+<div>
+    <h3>Datos de configuración</h3>
+    <br>
+    <ion-list lines="full" class="ion-no-padding ion-no-margin">
+        <form [formGroup]="configForm">
+            <ion-item>
+                <ion-label position="stacked">Misión:</ion-label>
+                <ion-input formControlName="mision" type="text" placeholder="Nombre de la misión"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Avión:</ion-label>
+                <ion-select formControlName="avion" value="avion" ok-text="Aceptar" cancel-text="Cancelar" placeholder="Seleccione avión">
+                    <ion-select-option value="avion1">Avión 1</ion-select-option>
+                    <ion-select-option value="avion2">Avión 2</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Fecha:</ion-label>
+                <ion-input formControlName="fecha" type="date"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Ciudad de Ida y Vuelta:</ion-label>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="stacked">Origen:</ion-label>
+                                <ion-select formControlName="origen" value="origen" ok-text="Aceptar" cancel-text="Cancelar" placeholder="-">
+                                    <ion-select-option value="origen1">Origen 1</ion-select-option>
+                                    <ion-select-option value="origen2">Origen 2</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="stacked">Destino:</ion-label>
+                                <ion-select formControlName="destino" value="destino" ok-text="Aceptar" cancel-text="Cancelar" placeholder="-">
+                                    <ion-select-option value="destino1">Destino 1</ion-select-option>
+                                    <ion-select-option value="destino2">Destino 2</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Piloto:</ion-label>
+                <ion-input formControlName="piloto" type="text" placeholder="Ingrese nombre del tripulante"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Consumo de combustible (lb/h):</ion-label>
+                <ion-input formControlName="combustible" type="number" placeholder="Ingrese el nivel de combustible"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Tiempo est. de vuelo:</ion-label>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <ion-label position="stacked">Horas:</ion-label>
+                            <ion-datetime formControlName="horas" display-format="H" placeholder="H" done-text="aceptar" cancel-text="cancelar"></ion-datetime>
+                        </ion-col>
+                        <ion-col>
+                            <ion-label position="stacked">Minutos:</ion-label>
+                            <ion-datetime formControlName="minutos" display-format="m" placeholder="m" done-text="aceptar" cancel-text="cancelar"></ion-datetime>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-item>
+        </form>
+    </ion-list>
+</div>
