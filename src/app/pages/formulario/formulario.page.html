@@ -12,13 +12,16 @@
             <app-combustible (valido2)="formularioValido2 = $event"></app-combustible>
         </ion-slide>
 
+        <ion-slide>
+            <app-centro-gravedad (valido3)="formularioValido3 = $event" style="width: 90%;"></app-centro-gravedad>
+        </ion-slide>
 
         <ion-slide>
-            <app-config-pallets></app-config-pallets>
+            <app-pallets></app-pallets>
         </ion-slide>
 
         <!-- <ion-slide>
-            <app-centro-gravedad (valido3)="formularioValido3 = $event" style="width: 90%;"></app-centro-gravedad>
+            <app-config-pallets></app-config-pallets>
         </ion-slide> -->
 
     </ion-slides>

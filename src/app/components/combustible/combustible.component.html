@@ -5,7 +5,7 @@
 
         <ion-item>
             <ion-label>Combustible:</ion-label>
-            <ion-input formControlName="combustible" placeholder="Inserte combustible del avión" type="number"></ion-input>
+            <ion-input [(ngModel)]="objetoCombustible.combustible" formControlName="combustible" placeholder="Inserte combustible del avión" type="number"></ion-input>
         </ion-item>
         <h4 class="ion-text-center">Decolaje</h4>
 
@@ -44,23 +44,23 @@
 
                     <ion-item>
                         <ion-label>-</ion-label>
-                        <ion-input formControlName="unoCuatro" type="number"></ion-input>
+                        <ion-input [(ngModel)]="objetoCombustible.unoCuatro" formControlName="unoCuatro" type="number"></ion-input>
                     </ion-item>
                     <ion-item>
                         <ion-label>-</ion-label>
-                        <ion-input formControlName="dosTres" type="number"></ion-input>
+                        <ion-input [(ngModel)]="objetoCombustible.dosTres" formControlName="dosTres" type="number"></ion-input>
                     </ion-item>
                     <ion-item>
                         <ion-label>-</ion-label>
-                        <ion-input formControlName="auxiliares" type="number"></ion-input>
+                        <ion-input [(ngModel)]="objetoCombustible.auxiliares" formControlName="auxiliares" type="number"></ion-input>
                     </ion-item>
                     <ion-item>
                         <ion-label>-</ion-label>
-                        <ion-input formControlName="pylons" type="number"></ion-input>
+                        <ion-input [(ngModel)]="objetoCombustible.pylons" formControlName="pylons" type="number"></ion-input>
                     </ion-item>
                     <ion-item>
-                        <ion-label>-</ion-label>
-                        <ion-input formControlName="total" type="number"></ion-input>
+                        <ion-label></ion-label>
+                        <ion-input [(ngModel)]="objetoCombustible.total" formControlName="total" type="number"></ion-input>
                     </ion-item>
                 </ion-col>
             </ion-row>

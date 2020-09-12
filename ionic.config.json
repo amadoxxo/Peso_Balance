@@ -1,5 +1,7 @@
 {
   "name": "pesoBalance",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,16 @@
+<ion-item>
+    <ion-label>
+        No. de Pasajeros
+    </ion-label>
+    <ion-select (ionChange)="cambioSelect($event)" interface="action-sheet" mode="ios">
+        <ion-select-option *ngFor="let palletSelect of pallets" [value]="palletSelect.value">{{palletSelect.value}}</ion-select-option>
+    </ion-select>
+</ion-item>
+
+<div *ngFor="let pallet of pallets">
+    <ion-item *ngIf="pallet.value !== 0">
+        <ion-icon [color]="pallet.color" [name]="pallet.icon" slot="start"></ion-icon>
+        pasajero {{pallet.value}}
+        <ion-chip [color]="pallet.color" slot="end">{{pallet.mensaje}}</ion-chip>
+    </ion-item>
+</div>

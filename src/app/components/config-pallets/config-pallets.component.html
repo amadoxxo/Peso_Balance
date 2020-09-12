@@ -2,31 +2,37 @@
 <br>
 
 <ion-item>
-    <ion-label>Peso del pasajero: </ion-label>
-    <ion-input [(ngModel)]="addPasajeros.peso_pasajero"></ion-input>
-    <ion-button color="light" (click)="agregar(addPasajeros)">
-        <ion-icon name="add"></ion-icon>
-    </ion-button>
+    <ion-label>Puesto del pasajero: </ion-label>
+    <ion-input [(ngModel)]="newItem.title"></ion-input>
 </ion-item>
 
-<ion-item *ngFor="let item of pasajeros">
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <ion-item color="primary"><b>Pallet:</b></ion-item>
-                <ion-item></ion-item>
-            </ion-col>
-            <ion-col>
-                <ion-item color="primary">
-                    <b>Peso(lb):</b>
-                </ion-item>
-                <ion-item>
-                    {{item.peso_pasajero}}
-                </ion-item>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-    <ion-button color="danger" (click)="eliminar(item.peso_pasajero)">
-        <ion-icon name="trash"></ion-icon>
-    </ion-button>
+<ion-item>
+    <ion-label>Peso del pasajero:</ion-label>
+    <ion-input [(ngModel)]="newItem.value"></ion-input>
 </ion-item>
+
+<ion-button (click)="addItem()" color="secondary" expand="block">Añadir datos</ion-button>
+
+<ion-list #mylist>
+    <ion-item-sliding *ngFor="let item of items">
+        <ion-item>
+            <ion-label text-wrap>
+                <h3>{{item.title}}</h3>
+                <ion-text color="secondary">
+                    <p>{{item.value}}</p>
+                </ion-text>
+            </ion-label>
+            <p>{{item.modified | date: 'short'}}</p>
+        </ion-item>
+
+        <ion-item-options side="end">
+            <ion-item-option color="secondary" (click)="updateItem(item)">
+                <ion-icon style="font-size: 20px;" name="reload"></ion-icon>
+            </ion-item-option>
+            <ion-item-option color="danger" (click)="deleteItem(item)">
+                <ion-icon style="font-size: 20px;" name="trash-outline"></ion-icon>
+            </ion-item-option>
+        </ion-item-options>
+    </ion-item-sliding>
+
+</ion-list>

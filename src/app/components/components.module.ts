@@ -7,6 +7,7 @@ import { DatosConfigComponent } from './datos-config/datos-config.component';
 import { CombustibleComponent } from './combustible/combustible.component';
 import { CentroGravedadComponent } from './centro-gravedad/centro-gravedad.component';
 import { ConfigPalletsComponent } from './config-pallets/config-pallets.component';
+import { PalletsComponent } from './pallets/pallets.component';
 
 
 
@@ -17,6 +18,7 @@ import { ConfigPalletsComponent } from './config-pallets/config-pallets.componen
     CombustibleComponent,
     CentroGravedadComponent,
     ConfigPalletsComponent,
+    PalletsComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,7 @@ import { ConfigPalletsComponent } from './config-pallets/config-pallets.componen
     CombustibleComponent,
     CentroGravedadComponent,
     ConfigPalletsComponent,
+    PalletsComponent,
   ],
 })
 export class ComponentsModule { }
